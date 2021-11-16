@@ -15,7 +15,7 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-
+        --- Get all students
         public PartialViewResult All()
         {
             List<StudentResult> str = st.StudentResults.ToList();
