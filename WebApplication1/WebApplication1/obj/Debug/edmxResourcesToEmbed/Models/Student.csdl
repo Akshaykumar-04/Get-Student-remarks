@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="StudentResult">
+    <Key>
+      <PropertyRef Name="StudentResultId" />
+    </Key>
+    <Property Name="StudentResultId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="studentId" Type="Int32" Nullable="false" />
+    <Property Name="assesmentId" Type="Int32" Nullable="false" />
+    <Property Name="remarks" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="StudentDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="StudentResults" EntityType="Self.StudentResult" />
+  </EntityContainer>
+</Schema>

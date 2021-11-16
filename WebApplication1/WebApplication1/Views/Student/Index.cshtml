@@ -1,0 +1,29 @@
+﻿
+<script src="~/Scripts/jquery-3.6.0.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<h2>Student Results</h2>
+@Ajax.ActionLink("All","All", new AjaxOptions() {
+    HttpMethod = "GET",
+    UpdateTargetId = "studentdiv",
+    InsertionMode = InsertionMode.Replace
+
+})
+<span style="color:blue">|</span>
+@Ajax.ActionLink("Pass", "Pass", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "studentdiv",
+    InsertionMode = InsertionMode.Replace
+
+})
+<span style="color:blue">|</span>
+@Ajax.ActionLink("Fail", "fail", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "studentdiv",
+    InsertionMode = InsertionMode.Replace
+
+})
+<div id="studentdiv" >
+
+</div>
