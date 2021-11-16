@@ -15,17 +15,19 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        --- Get all students
+        //--- Get all students
         public PartialViewResult All()
         {
             List<StudentResult> str = st.StudentResults.ToList();
             return PartialView("_Student",str);
         }
+        //-- Get only passed 
         public PartialViewResult Pass()
         {
             List<StudentResult> str = st.StudentResults.Where(s => s.remarks.Equals("P")).ToList();
             return PartialView("_Student", str);
         }
+        //-- Get only failed 
         public PartialViewResult fail()
         {
             List<StudentResult> str = st.StudentResults.Where(s => s.remarks.Equals("F")).ToList();
